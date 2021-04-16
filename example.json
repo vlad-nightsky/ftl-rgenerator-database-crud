@@ -1,8 +1,8 @@
 {
     "meta": {
-        "package": "ru.foodtechlab.sandbox.integration.distributor",
-        "nameUp": "Integration",
-        "nameLow": "integration"
+        "package": "ru.foodtechlab.sandbox.service",
+        "nameUp": "Order",
+        "nameLow": "order"
     },
     "document": {
         "fields": [
