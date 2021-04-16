@@ -1,6 +1,22 @@
 package {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.documents;
 
-import {{meta.package}}.domain.{{meta.nameLow}}.entity.{{meta.nameUp}}Entity;
+import com.rcore.database.mongo.commons.document.BaseDocument;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class {{meta.nameUp}}Doc extends {{meta.nameUp}}Entity {
+@Document
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+public class {{meta.nameUp}}Doc extends BaseDocument {
+    {{#document.fields}}
+    /**
+     * {{description}} 
+     */
+    {{accessModifier}} {{type}} {{name}};
+    {{/document.fields}}
 }

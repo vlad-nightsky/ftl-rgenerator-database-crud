@@ -3,5 +3,23 @@
         "package": "ru.foodtechlab.sandbox.integration.distributor",
         "nameUp": "Integration",
         "nameLow": "integration"
+    },
+    "document": {
+        "fields": [
+            {
+                "type": "String",
+                "name": "number",
+                "nameUperCase": "Number",
+                "accessModifier": "protected",
+                "description": "Номер"
+            },
+            {
+                "type": "String",
+                "name": "title",
+                "nameUperCase": "Title",
+                "accessModifier": "protected",
+                "description": "Заголовок"
+            }
+        ]
     }
 }
