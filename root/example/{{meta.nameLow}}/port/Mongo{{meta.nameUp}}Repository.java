@@ -1,5 +1,6 @@
 package {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.port;
 
+import com.rcore.database.mongo.commons.query.FindByIdQuery;
 import com.rcore.database.mongo.commons.utils.CollectionNameUtils;
 import com.rcore.domain.commons.port.dto.SearchResult;
 import lombok.RequiredArgsConstructor;
@@ -7,7 +8,6 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 import {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.mapper.{{meta.nameUp}}Mapper;
-import {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.query.FindByIdQuery;
 import {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.query.FindWithFiltersQuery;
 import {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.documents.{{meta.nameUp}}Doc;
 import {{meta.package}}.domain.{{meta.nameLow}}.entity.{{meta.nameUp}}Entity;
