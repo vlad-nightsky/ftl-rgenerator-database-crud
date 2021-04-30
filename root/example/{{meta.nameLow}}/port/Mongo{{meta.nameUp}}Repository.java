@@ -14,7 +14,6 @@ import {{meta.package}}.domain.{{meta.nameLow}}.entity.{{meta.nameUp}}Entity;
 import {{meta.package}}.domain.{{meta.nameLow}}.port.{{meta.nameUp}}Repository;
 import {{meta.package}}.domain.{{meta.nameLow}}.port.filters.{{meta.nameUp}}Filters;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
