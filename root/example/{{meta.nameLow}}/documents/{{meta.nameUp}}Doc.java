@@ -19,4 +19,18 @@ public class {{meta.nameUp}}Doc extends BaseDocument {
      */
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
+    
+    {{#innerClases}}
+    @Builder
+    @Getter
+    @Setter
+    public static class {{className}} {
+        {{#fields}}
+        /**
+         * {{description}} 
+         */
+        {{accessModifier}} {{type}} {{name}};
+        {{/fields}}
+    }
+    {{/innerClases}}
 }
