@@ -21,28 +21,5 @@
                 "description": "Заголовок"
             }
         ]
-    },
-    "innerClases": [{
-        "className": "Address",
-        "var": "address",
-        "description": "Адрес",
-        "fields": [
-            {
-                "type": "String",
-                "name": "street",
-                "nameUperCase": "Street",
-                "accessModifier": "protected",
-                "description": "Улица",
-                "innerClass": false
-            },
-            {
-                "type": "String",
-                "name": "house",
-                "nameUperCase": "House",
-                "accessModifier": "protected",
-                "description": "Дом",
-                "innerClass": false
-            }
-        ]
-    }]
+    }
 }
