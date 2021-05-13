@@ -19,29 +19,35 @@
                 "nameUperCase": "Title",
                 "accessModifier": "protected",
                 "description": "Заголовок"
+            },
+            {
+                "type": "Price",
+                "name": "price",
+                "nameUperCase": "Price",
+                "accessModifier": "protected",
+                "description": "Цена",
+                "innerClass": true
             }
         ]
     },
     "innerClases": [{
-        "className": "Address",
-        "var": "address",
-        "description": "Адрес",
+        "className": "Price",
+        "var": "price",
+        "description": "Цена",
         "fields": [
             {
-                "type": "String",
-                "name": "street",
-                "nameUperCase": "Street",
+                "type": "double",
+                "name": "discount",
+                "nameUperCase": "Discount",
                 "accessModifier": "protected",
-                "description": "Улица",
-                "innerClass": false
+                "description": "Скидка"
             },
             {
-                "type": "String",
-                "name": "house",
-                "nameUperCase": "House",
+                "type": "double",
+                "name": "total",
+                "nameUperCase": "Total",
                 "accessModifier": "protected",
-                "description": "Дом",
-                "innerClass": false
+                "description": "Итого"
             }
         ]
     }]

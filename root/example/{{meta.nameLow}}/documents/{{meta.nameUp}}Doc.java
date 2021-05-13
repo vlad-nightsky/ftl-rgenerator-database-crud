@@ -25,6 +25,9 @@ public class {{meta.nameUp}}Doc extends BaseDocument {
     @Setter
     public static class {{className}} {
         {{#fields}}
+        /**
+         * {{description}} 
+         */
         {{accessModifier}} {{type}} {{name}};
         {{/fields}}
     }
