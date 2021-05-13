@@ -24,7 +24,7 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 {{/innerClass}}
                 {{/document.fields}}
                 {{#innerClases}}
-                .{{var}}({{meta.nameUp}}Entity.{{className}}
+                .{{var}}({{meta.nameUp}}Doc.{{className}}
                         .builder()
                         {{#fields}}
                         .{{name}}(entity.get{{className}}().get{{nameUperCase}}())
