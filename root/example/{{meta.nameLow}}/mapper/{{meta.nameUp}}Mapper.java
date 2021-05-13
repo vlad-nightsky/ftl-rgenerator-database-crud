@@ -19,7 +19,9 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 .builder()
                 .id(idGenerator.parse(entity.getId()))
                 {{#document.fields}}
+                {{^innerClass}}
                 .{{name}}(entity.get{{nameUperCase}}())
+                {{/innerClass}}
                 {{/document.fields}}
                 .{{var}}({{meta.nameUp}}Entity.{{className}}
                         .builder()
@@ -40,7 +42,9 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 .builder()
                 .id(doc.getId().toString())
                 {{#document.fields}}
-                .{{name}}(doc.get{{nameUperCase}}())
+                {{^innerClass}}
+                .{{name}}(entity.get{{nameUperCase}}())
+                {{/innerClass}}
                 {{/document.fields}}
                 {{#innerClases}}
                 .{{var}}({{meta.nameUp}}Entity.{{className}}
