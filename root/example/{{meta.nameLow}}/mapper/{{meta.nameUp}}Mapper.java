@@ -21,14 +21,6 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 {{#document.fields}}
                 .{{name}}(entity.get{{nameUperCase}}())
                 {{/document.fields}}
-                .{{var}}({{meta.nameUp}}Entity.{{className}}
-                        .builder()
-                        {{#document.fields}}
-                        .{{name}}(entity.get{{className}}().get{{nameUpperCase}}())
-                        {{/document.fields}}
-                        .build()
-                )
-                {{/innerClases}}
                 .createdAt(entity.getCreatedAt())
                 .updatedAt(entity.getUpdatedAt())
                 .build();
@@ -42,15 +34,6 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 {{#document.fields}}
                 .{{name}}(doc.get{{nameUperCase}}())
                 {{/document.fields}}
-                {{#innerClases}}
-                .{{var}}({{meta.nameUp}}Entity.{{className}}
-                        .builder()
-                        {{#document.fields}}
-                        .{{name}}(doc.get{{className}}().get{{nameUpperCase}}())
-                        {{/document.fields}}
-                        .build()
-                )
-                {{/innerClases}}
                 .createdAt(doc.getCreatedAt())
                 .updatedAt(doc.getUpdatedAt())
                 .build();
