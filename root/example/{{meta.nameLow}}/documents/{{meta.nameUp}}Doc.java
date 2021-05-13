@@ -19,4 +19,18 @@ public class {{meta.nameUp}}Doc extends BaseDocument {
      */
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
+
+        
+    {{#innerClases}}
+    @Builder
+    @Getter
+    @Setter
+    @ApiModel("{{description}}")
+    public static class {{className}} {
+        {{#fields}}
+        @ApiModelProperty("{{description}}")
+        {{accessModifier}} {{type}} {{name}};
+        {{/fields}}
+    }
+    {{/innerClases}}
 }
