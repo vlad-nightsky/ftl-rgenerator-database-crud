@@ -1,9 +1,7 @@
 package {{meta.package}}.infrastructure.database.mongo.{{meta.nameLow}}.documents;
 
 import com.rcore.database.mongo.commons.document.BaseDocument;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,15 +18,13 @@ public class {{meta.nameUp}}Doc extends BaseDocument {
     {{accessModifier}} {{type}} {{name}};
     {{/document.fields}}
 
-        
+ 
     {{#innerClases}}
     @Builder
     @Getter
     @Setter
-    @ApiModel("{{description}}")
     public static class {{className}} {
         {{#fields}}
-        @ApiModelProperty("{{description}}")
         {{accessModifier}} {{type}} {{name}};
         {{/fields}}
     }

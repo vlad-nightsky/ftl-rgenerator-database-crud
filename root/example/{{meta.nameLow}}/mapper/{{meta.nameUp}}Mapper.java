@@ -27,7 +27,7 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 .{{var}}({{meta.nameUp}}Entity.{{className}}
                         .builder()
                         {{#fields}}
-                        .{{className}}(doc.get{{className}}().get{{nameUperCase}}())
+                        .{{name}}(entity.get{{className}}().get{{nameUperCase}}())
                         {{/fields}}
                         .build()
                 )
@@ -51,7 +51,7 @@ public class {{meta.nameUp}}Mapper implements ExampleDataMapper<{{meta.nameUp}}E
                 .{{var}}({{meta.nameUp}}Entity.{{className}}
                         .builder()
                         {{#fields}}
-                        .{{className}}(doc.get{{className}}().get{{nameUperCase}}())
+                        .{{name}}(doc.get{{className}}().get{{nameUperCase}}())
                         {{/fields}}
                         .build()
                 )
